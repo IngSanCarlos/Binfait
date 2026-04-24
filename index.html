@@ -776,7 +776,7 @@ async function doForgot() {
   const email = document.getElementById('forgot-email').value.trim();
   if (!email) { showAuthMsg('forgot','Ingresá tu email'); return; }
   const { error } = await sb.auth.resetPasswordForEmail(email, {
-    redirectTo: 'https://binfait.com.ar'
+    redirectTo: 'https://ingsancarlos.github.io/Binfait'
   });
   if (error) showAuthMsg('forgot', error.message);
   else showAuthMsg('forgot','Link enviado. Revisá tu email.','success');
